@@ -142,7 +142,19 @@ Open on the home router:
 
 ---
 
-## 3. Adding a client
+## 3. Initialising all clients at once
+
+Run this once on the RPi after the server is up. It generates key pairs, writes each client's `.conf`, and adds all peers to `wg0.conf` in one shot:
+
+```bash
+sudo bash wireguard/add-clients.sh
+```
+
+The script is idempotent — re-running it skips clients whose keys already exist and peers already present in `wg0.conf`.
+
+---
+
+## 4. Adding a new client manually
 
 ### On the RPi — create the client config
 
@@ -188,7 +200,7 @@ sudo qrencode -t ansiutf8 < /etc/wireguard/clients/<name>.conf
 
 ---
 
-## 4. Connecting as a client
+## 5. Connecting as a client
 
 ### Linux / macOS
 
@@ -230,6 +242,6 @@ ssh user@10.0.0.1
 
 ---
 
-## 5. Nginx — subdomains
+## 6. Nginx — subdomains
 
 *(Pending)*
