@@ -21,8 +21,5 @@ wireguard/clients/*.conf
 wireguard/clients/*.conf.template
 !wireguard/clients/client.conf.template
 
-# WireGuard scripts with private info
-wireguard/add-clients.sh
-
 # Otros
 .cl*
