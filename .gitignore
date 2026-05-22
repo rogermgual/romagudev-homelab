@@ -17,4 +17,4 @@ secrets/
 config.json           
 
 # Otros
-.claude
+.cl*
