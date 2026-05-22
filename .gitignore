@@ -15,3 +15,6 @@ secrets/
 
 # Tokens de bots, APIs...
 config.json           # Si contiene secretos
+
+# Otros
+.claude
