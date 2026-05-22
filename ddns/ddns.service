@@ -1,0 +1,21 @@
+[Unit]
+Description=Cloudflare DDNS updater
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ddns
+EnvironmentFile=/etc/ddns/ddns.env
+ExecStart=/usr/local/bin/ddns-update.py
+Restart=on-failure
+RestartSec=30
+
+# Harden the process a bit
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
