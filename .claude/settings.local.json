@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(mkdir -p /home/hrodgerr/repos/raspberrypi_setup/docs/runbooks /home/hrodgerr/repos/raspberrypi_setup/ddns /home/hrodgerr/repos/raspberrypi_setup/wireguard/server /home/hrodgerr/repos/raspberrypi_setup/wireguard/clients /home/hrodgerr/repos/raspberrypi_setup/nginx/sites /home/hrodgerr/repos/raspberrypi_setup/services/discord-bot /home/hrodgerr/repos/raspberrypi_setup/services/minecraft /home/hrodgerr/repos/raspberrypi_setup/services/mcp-pokemon /home/hrodgerr/repos/raspberrypi_setup/scripts)",
-      "Bash(touch /home/hrodgerr/repos/raspberrypi_setup/.gitignore /home/hrodgerr/repos/raspberrypi_setup/docs/architecture.md /home/hrodgerr/repos/raspberrypi_setup/docs/setup-guide.md /home/hrodgerr/repos/raspberrypi_setup/docs/runbooks/wireguard-down.md /home/hrodgerr/repos/raspberrypi_setup/docs/runbooks/ddns-failing.md /home/hrodgerr/repos/raspberrypi_setup/ddns/ddns-update.py /home/hrodgerr/repos/raspberrypi_setup/ddns/ddns.service /home/hrodgerr/repos/raspberrypi_setup/wireguard/server/wg0.conf.template /home/hrodgerr/repos/raspberrypi_setup/wireguard/clients/client.conf.template /home/hrodgerr/repos/raspberrypi_setup/nginx/nginx.conf /home/hrodgerr/repos/raspberrypi_setup/nginx/sites/romagudev.com.conf /home/hrodgerr/repos/raspberrypi_setup/nginx/sites/mc.romagudev.com.conf /home/hrodgerr/repos/raspberrypi_setup/services/discord-bot/.gitkeep /home/hrodgerr/repos/raspberrypi_setup/services/minecraft/.gitkeep /home/hrodgerr/repos/raspberrypi_setup/services/mcp-pokemon/.gitkeep /home/hrodgerr/repos/raspberrypi_setup/scripts/bootstrap.sh /home/hrodgerr/repos/raspberrypi_setup/scripts/backup.sh)"
-    ]
-  }
-}
