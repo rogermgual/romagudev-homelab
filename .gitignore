@@ -7,14 +7,14 @@ publickey
 # Variables de entorno con secretos
 .env
 *.env
-!*.env.example        # Los .example SÍ se commitean como plantilla
+!*.env.example
 
 # Cloudflare API tokens
 cloudflare.ini
 secrets/
 
 # Tokens de bots, APIs...
-config.json           # Si contiene secretos
+config.json           
 
 # Otros
 .claude
