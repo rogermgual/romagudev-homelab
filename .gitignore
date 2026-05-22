@@ -16,5 +16,10 @@ secrets/
 # Tokens de bots, APIs...
 config.json           
 
+# WireGuard client configs — only the generic template is tracked
+wireguard/clients/*.conf
+wireguard/clients/*.conf.template
+!wireguard/clients/client.conf.template
+
 # Otros
 .cl*

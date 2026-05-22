@@ -1,0 +1,34 @@
+[Interface]
+# RPi WireGuard server — internal network 10.0.0.1/24
+Address = 10.0.0.1/24
+ListenPort = 51820
+PrivateKey = REPLACE_WITH_SERVER_PRIVATE_KEY
+
+# Enable IP forwarding and NAT so VPN clients can reach the internet
+# Replace eth0 with the actual RPi network interface (check with: ip route show default)
+PostUp   = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -A FORWARD -o wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -D FORWARD -o wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+# ---------------------------------------------------------------------------
+# Peers — add one [Peer] block per client
+# ---------------------------------------------------------------------------
+
+# hrodgerr — primary device (10.0.0.2)
+[Peer]
+PublicKey = REPLACE_WITH_HRODGERR_PUBLIC_KEY
+AllowedIPs = 10.0.0.2/32
+
+# tebrase (10.0.0.3)
+[Peer]
+PublicKey = REPLACE_WITH_TEBRASE_PUBLIC_KEY
+AllowedIPs = 10.0.0.3/32
+
+# nakko (10.0.0.4)
+[Peer]
+PublicKey = REPLACE_WITH_NAKKO_PUBLIC_KEY
+AllowedIPs = 10.0.0.4/32
+
+# hrodgerr-afk — secondary device (10.0.0.5)
+[Peer]
+PublicKey = REPLACE_WITH_HRODGERR_AFK_PUBLIC_KEY
+AllowedIPs = 10.0.0.5/32

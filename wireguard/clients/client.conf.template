@@ -1,0 +1,17 @@
+[Interface]
+# This client's IP inside the VPN — change to the assigned address (10.0.0.2, .3, .4...)
+Address = 10.0.0.X/32
+PrivateKey = REPLACE_WITH_CLIENT_PRIVATE_KEY
+DNS = 10.0.0.1
+
+[Peer]
+# WireGuard server (RPi)
+PublicKey = REPLACE_WITH_SERVER_PUBLIC_KEY
+Endpoint = vpn.romagudev.com:51820
+
+# Split tunnel — only VPN traffic goes through the tunnel
+# To route ALL traffic through the VPN, use 0.0.0.0/0 instead
+AllowedIPs = 10.0.0.0/24
+
+# Keeps the tunnel alive through NAT
+PersistentKeepalive = 25
